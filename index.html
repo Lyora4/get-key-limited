@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyora Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="ios-container">
+        <!-- Status Bar (iOS style) -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <header class="ios-header">
+            <div class="header-content">
+                <h1>Lyora Hub</h1>
+                <p>Get Your Key, BTW U Can Login On Every Devive With This Ur Owned</p>
+            </div>
+            <div class="header-icon">
+                <i class="fas fa-key"></i>
+            </div>
+        </header>
+        
+        <main class="ios-main">
+            <!-- Key Display Section -->
+            <div class="key-display-container glass-effect">
+                <div class="section-label">
+                    <i class="fas fa-keyboard"></i>
+                    Generated Key
+                </div>
+                <div class="key-display" id="keyDisplay">
+                    <span id="keyText">Tap the button to generate a key</span>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <button class="ios-button generate-btn" id="generateBtn">
+                    <i class="fas fa-plus-circle"></i>
+                    <span class="button-text">Generate New Key</span>
+                </button>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-container">
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="totalKeys">0</div>
+                        <div class="stat-label">Total Keys</div>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="activeKeys">0</div>
+                        <div class="stat-label">Active Keys</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Keys Section -->
+            <div class="key-history glass-effect">
+                <div class="section-header">
+                    <div class="section-label">
+                        <i class="fas fa-clock"></i>
+                        Recent Keys
+                    </div>
+                    <button class="clear-btn" id="clearHistory">
+                        <i class="fas fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- Generated keys will appear here -->
+                    <div class="empty-state">
+                        <i class="far fa-clock"></i>
+                        <p>No recent keys yet</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
